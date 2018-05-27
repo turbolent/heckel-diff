@@ -1,0 +1,51 @@
+{
+  "name": "heckel-diff",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Bastian Müller <bastian@turbolent.com>",
+  "description": "Paul Heckel's A Technique for Isolating Differences Between Files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turbolent/heckel-diff.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/declarations/index.d.ts",
+  "module": "src/index.js",
+  "files": [
+    "README.md",
+    "dist/",
+    "src/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "webpack --mode development --progress --profile --colors",
+    "buildProduction": "webpack --mode production --progress --profile --colors",
+    "prepublishOnly": "yarn run buildProduction",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "buildTestEnv": "webpack --mode production --context tests/env --config tests/env/webpack.config.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "22.2.3",
+    "jest": "22.4.4",
+    "ts-loader": "4.3.0",
+    "tslint": "5.10.0",
+    "typescript": "2.8.3",
+    "webpack": "4.9.1",
+    "webpack-cli": "2.1.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.ts$": "<rootDir>/tests/preprocessor.js"
+    },
+    "testMatch": [
+      "<rootDir>/tests/*.spec.ts"
+    ],
+    "verbose": true
+  }
+}

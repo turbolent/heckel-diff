@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - "8"
+
+branches:
+  only:
+    - master
+
+script: yarn buildProduction && yarn test -- --runInBand
+
+cache:
+  directories:
+    - "node_modules"
+  yarn: true
