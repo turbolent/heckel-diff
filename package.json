@@ -1,12 +1,12 @@
 {
-  "name": "heckel-diff",
+  "name": "heckel-diff-items",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Bastian Müller <bastian@turbolent.com>",
   "description": "Paul Heckel's A Technique for Isolating Differences Between Files",
   "repository": {
     "type": "git",
-    "url": "https://github.com/turbolent/heckel-diff.git"
+    "url": "https://github.com/turbolent/heckel-diff-items.git"
   },
   "main": "dist/index.js",
   "types": "dist/declarations/index.d.ts",
